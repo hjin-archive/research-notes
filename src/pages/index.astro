@@ -12,37 +12,67 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+		<main style="max-width: 980px; margin: 0 auto; padding: 56px 20px;">
+			<header style="margin-bottom: 28px;">
+				<p style="font-size: 18px; margin: 14px 0 0; opacity: 0.85;">
+					An indexed notebook for applied science: theory → implementation → evidence.
+				</p>
+			</header>
+
+			<section style="margin: 24px 0 32px;">
+				<p style="font-size: 16px; line-height: 1.7; margin: 0; opacity: 0.9;">
+					I’m building a structured set of notes that connects mathematical foundations to practical ML systems.
+					Each topic is broken into small pages with worked examples, common failure modes, and minimal reproductions.
+					When a note becomes actionable, it graduates into a case study.
+				</p>
+			</section>
+
+			<section
+				style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 28px 0;"
+			>
+				<a
+					href="/notes"
+					style="display:block; padding: 16px; border: 1px solid rgba(0,0,0,0.12); border-radius: 12px; text-decoration: none;"
+				>
+					<div style="font-weight: 650; margin-bottom: 6px;">Notes by topic</div>
+					<div style="opacity: 0.8; line-height: 1.5;">Foundations and methods, organized for reuse.</div>
+				</a>
+
+				<a
+					href="/blog"
+					style="display:block; padding: 16px; border: 1px solid rgba(0,0,0,0.12); border-radius: 12px; text-decoration: none;"
+				>
+					<div style="font-weight: 650; margin-bottom: 6px;">Paper reviews</div>
+					<div style="opacity: 0.8; line-height: 1.5;">High-signal summaries and replication notes.</div>
+				</a>
+
+				<a
+					href="/resume"
+					style="display:block; padding: 16px; border: 1px solid rgba(0,0,0,0.12); border-radius: 12px; text-decoration: none;"
+				>
+					<div style="font-weight: 650; margin-bottom: 6px;">Resume</div>
+					<div style="opacity: 0.8; line-height: 1.5;">Background, interests, and links.</div>
+				</a>
+			</section>
+
+			<section style="margin-top: 34px; padding-top: 18px; border-top: 1px solid rgba(0,0,0,0.08);">
+				<h2 style="font-size: 18px; margin: 0 0 10px;">Start here</h2>
+				<ul style="margin: 0; padding-left: 18px; line-height: 1.8;">
+					<li><a href="/notes/linear-algebra">Linear Algebra</a> — projections, SVD, conditioning</li>
+					<li><a href="/notes">Probability</a> — coming soon</li>
+					<li><a href="/notes">Optimization</a> — coming soon</li>
+					<li><a href="/notes">Evaluation</a> — coming soon</li>
+				</ul>
+			</section>
+
+			<section style="margin-top: 26px;">
+				<h2 style="font-size: 18px; margin: 0 0 10px;">How to read this</h2>
+				<ul style="margin: 0; padding-left: 18px; line-height: 1.8; opacity: 0.9;">
+					<li><strong>Notes</strong> are compact, indexed, and meant to be revisited.</li>
+					<li><strong>Paper reviews</strong> extract ideas, assumptions, and failure modes.</li>
+					<li><strong>Case studies</strong> show the full loop: method → implementation → evidence.</li>
+				</ul>
+			</section>
 		</main>
 		<Footer />
 	</body>
