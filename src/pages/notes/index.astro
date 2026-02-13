@@ -1,6 +1,61 @@
 ---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 ---
-<h1>Notes</h1>
-<ul>
-  <li><a href="/notes/linear-algebra">Linear Algebra</a></li>
-</ul>
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${SITE_TITLE} — Notes`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main style="max-width: 980px; margin: 0 auto; padding: 56px 20px;">
+			<header style="margin-bottom: 22px;">
+				<h1 style="font-size: 36px; margin: 0;">Notes</h1>
+				<p style="margin: 10px 0 0; opacity: 0.85; line-height: 1.6;">
+					Topic-indexed notes with compact explanations, worked examples, and implementation-minded takeaways.
+				</p>
+			</header>
+
+			<section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 18px;">
+				<a
+					href="/notes/linear-algebra"
+					style="display:block; padding: 16px; border: 1px solid rgba(0,0,0,0.12); border-radius: 12px; text-decoration: none;"
+				>
+					<div style="font-weight: 650; margin-bottom: 6px;">Linear Algebra</div>
+					<div style="opacity: 0.8; line-height: 1.5;">
+						Projections, SVD, conditioning — the applied minimum.
+					</div>
+					<div style="margin-top: 10px; opacity: 0.7; font-size: 14px;">
+						3 pages
+					</div>
+				</a>
+
+				<!-- Add more topic cards like this -->
+				<a
+					href="#"
+					style="display:block; padding: 16px; border: 1px dashed rgba(0,0,0,0.25); border-radius: 12px; text-decoration: none;"
+				>
+					<div style="font-weight: 650; margin-bottom: 6px;">Next topic</div>
+					<div style="opacity: 0.75; line-height: 1.5;">
+						Add a new folder under <code>src/pages/notes/</code>.
+					</div>
+				</a>
+			</section>
+
+			<section style="margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(0,0,0,0.08);">
+				<h2 style="font-size: 16px; margin: 0 0 10px;">Suggested reading order</h2>
+				<ol style="margin: 0; padding-left: 18px; line-height: 1.9; opacity: 0.9;">
+					<li>Linear Algebra</li>
+					<li>Probability</li>
+					<li>Optimization</li>
+					<li>Evaluation & Experimentation</li>
+				</ol>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
